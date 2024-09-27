@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    LAYAUT
+-->
+<FrameLayout
+
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/img"
+        android:scaleType="fitXY">
+    </ImageView>
+    <LinearLayout
+
+
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+        <Spinner
+            android:entries="@array/cursos"
+            android:id="@+id/spiCurso"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp" />
+        <Button
+            android:id="@+id/btnSeleccionarCurso"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/seleccionarCurso"
+            android:layout_margin="16dp" />
+        <TextView
+            android:id="@+id/txtAsignatura"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/sinCurso"
+            android:layout_margin="16dp" />
+        <EditText
+            android:id="@+id/txtObservaciones"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:gravity="start"
+            android:background="@color/white"
+            android:inputType="textMultiLine"
+            android:hint="@string/observaciones"
+            android:layout_margin="16dp" />
+        <Button
+            android:id="@+id/btnEnviar"
+            android:text="@string/enviar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:layout_margin="16dp" />
+    </LinearLayout>
+</FrameLayout>
