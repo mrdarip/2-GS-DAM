@@ -7,6 +7,10 @@ android {
     namespace = "movil.proyecto2"
     compileSdk = 34
 
+    buildFeatures{
+        viewBinding=true
+    }
+
     defaultConfig {
         applicationId = "movil.proyecto2"
         minSdk = 24
