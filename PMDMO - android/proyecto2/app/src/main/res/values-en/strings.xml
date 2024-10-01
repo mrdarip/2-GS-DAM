@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Proyect2</string>
+    <string name="sinCurso">There\'s no selected course</string>
+    <string name="observaciones">Insert observations</string>
+    <string name="enviar">Submit</string>
+    <string name="seleccionarCurso">Select course</string>
+    <string name="mensajeToast">Observations:</string>
+</resources>
