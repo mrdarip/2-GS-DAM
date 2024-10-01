@@ -7,6 +7,10 @@ android {
     namespace = "dam.moviles.ejercicio5"
     compileSdk = 34
 
+    buildFeatures{
+        viewBinding=true
+    }
+
     defaultConfig {
         applicationId = "dam.moviles.ejercicio5"
         minSdk = 24
