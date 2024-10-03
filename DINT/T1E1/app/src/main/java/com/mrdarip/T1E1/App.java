@@ -3,6 +3,9 @@ package com.mrdarip.T1E1; //Modificar al package correcto
 import javafx.application.Application;
 import javafx.geometry.Insets;
 import javafx.scene.Scene;
+import javafx.scene.control.Button;
+import javafx.scene.control.Label;
+import javafx.scene.control.TextField;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 
@@ -17,8 +20,16 @@ public class App extends Application {
 
     @Override
     public void start(Stage primaryStage) {
+        
+        Label priceLB = new Label("Precio:");
+        Label discountLB = new Label("Descuento:");
+        
+        TextField priceTF = new TextField();
+        TextField discountTF = new TextField();
+        
+        Button calcB = new Button("Calcular");
 
-        VBox vbox = new VBox(10); //Layout padre (contenedor de nodos). 10 px separación
+        VBox vbox = new VBox(10,priceLB,priceTF,discountLB,discountTF, calcB); //Layout padre (contenedor de nodos). 10 px separación
         vbox.setPadding(new Insets(20));//Borde interno 20px
         Scene scene = new Scene(vbox, 500, 400);
         primaryStage.setScene(scene);
