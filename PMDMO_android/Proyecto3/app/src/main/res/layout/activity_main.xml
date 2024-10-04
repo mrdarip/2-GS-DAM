@@ -21,26 +21,30 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:enabled="true"
-        android:layout_marginTop="16.dp"/>
+        android:layout_marginTop="16.dp"
+        android:text="Start"/>
 
     <Button
         android:id="@+id/btnStop"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:enabled="false"
-        android:layout_marginTop="16.dp"/>
+        android:layout_marginTop="16.dp"
+        android:text="Stop"/>
 
     <Button
         android:id="@+id/btnPausa"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:enabled="false"
-        android:layout_marginTop="16.dp"/>
+        android:layout_marginTop="16.dp"
+        android:text="Pause"/>
 
     <Button
         android:id="@+id/btnReiniciar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:enabled="false"
-        android:layout_marginTop="16.dp"/>
+        android:layout_marginTop="16.dp"
+        android:text="Reset"/>
 </LinearLayout>
