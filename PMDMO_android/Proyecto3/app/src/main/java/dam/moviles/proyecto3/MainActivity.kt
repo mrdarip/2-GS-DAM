@@ -2,10 +2,7 @@ package dam.moviles.proyecto3
 
 import android.os.Bundle
 import android.os.SystemClock
-import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
 import androidx.lifecycle.ViewModelProvider
 import dam.moviles.proyecto3.databinding.ActivityMainBinding
 
@@ -23,6 +20,24 @@ class MainActivity : AppCompatActivity() {
         initializeEvents()
     }
 
+    override fun onStart() {
+        super.onStart()
+
+        when(viewmodel.situation){
+            Situation.STOPPED -> {}
+            Situation.RUNNING ->{
+                enableStartBtn(false)
+                binding.chrClock.base=viewmodel.base
+                binding.chrClock.start()
+            }
+            Situation.PAUSED ->{
+                enableStartBtn(true)
+                viewmodel.reset(binding.chrClock.base,binding.chrClock)
+
+            }
+        }
+    }
+
     private fun initializeViewModel() {
         viewmodel = ViewModelProvider(this).get(MainActivityViewModel::class.java)
     }
@@ -32,18 +47,13 @@ class MainActivity : AppCompatActivity() {
             btnStart.setOnClickListener { start() }
             btnStop.setOnClickListener { stop() }
             btnPausa.setOnClickListener { pause() }
-            btnReiniciar.setOnClickListener { reset(0) }
+            btnReiniciar.setOnClickListener { viewmodel.reset(0,binding.chrClock) }
         }
-    }
-
-    private fun reset(offset: Long) {
-        viewmodel.base = SystemClock.elapsedRealtime() - offset
-        binding.chrClock.base = viewmodel.base
     }
 
     private fun pause() {
         enableStartBtn(true)
-        viewmodel.tiempoTranscurrido = SystemClock.elapsedRealtime() - viewmodel.base
+        viewmodel.updateElapsedTime()
 
         binding.chrClock.stop()
         viewmodel.situation = Situation.PAUSED
@@ -52,7 +62,7 @@ class MainActivity : AppCompatActivity() {
     private fun stop() {
         binding.chrClock.stop()
 
-        reset(0)
+        viewmodel.reset(0,binding.chrClock)
 
         enableStartBtn(true)
 
@@ -62,8 +72,11 @@ class MainActivity : AppCompatActivity() {
     private fun start() {
         enableStartBtn(false)
 
-        reset(if(viewmodel.situation == Situation.PAUSED) viewmodel.tiempoTranscurrido else 0)
-
+        viewmodel.reset(
+            if(viewmodel.situation == Situation.PAUSED)
+                viewmodel.elapsedTime
+            else 0,
+            binding.chrClock)
 
         binding.chrClock.start()
 
