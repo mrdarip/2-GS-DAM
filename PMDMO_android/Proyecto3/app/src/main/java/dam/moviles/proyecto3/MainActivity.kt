@@ -37,16 +37,16 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun reset(offset: Long) {
-        base = SystemClock.elapsedRealtime() - offset
-        binding.chrClock.base = base
+        viewmodel.base = SystemClock.elapsedRealtime() - offset
+        binding.chrClock.base = viewmodel.base
     }
 
     private fun pause() {
         enableStartBtn(true)
-        tiempoTranscurrido = SystemClock.elapsedRealtime() - base
+        viewmodel.tiempoTranscurrido = SystemClock.elapsedRealtime() - viewmodel.base
 
         binding.chrClock.stop()
-        situation = Situation.PAUSED
+        viewmodel.situation = Situation.PAUSED
     }
 
     private fun stop() {
@@ -56,18 +56,18 @@ class MainActivity : AppCompatActivity() {
 
         enableStartBtn(true)
 
-        situation=Situation.STOPPED
+        viewmodel.situation=Situation.STOPPED
     }
 
     private fun start() {
         enableStartBtn(false)
 
-        reset(if(situation == Situation.PAUSED) tiempoTranscurrido else 0)
+        reset(if(viewmodel.situation == Situation.PAUSED) viewmodel.tiempoTranscurrido else 0)
 
 
         binding.chrClock.start()
 
-        situation = Situation.RUNNING
+        viewmodel.situation = Situation.RUNNING
     }
 
 
