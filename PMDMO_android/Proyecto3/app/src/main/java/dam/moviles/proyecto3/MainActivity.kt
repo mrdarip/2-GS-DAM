@@ -38,6 +38,18 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
+    override fun onStop() {
+        super.onStop()
+        if(viewmodel.situation == Situation.RUNNING){
+            viewmodel.updateElapsedTime()
+            binding.chrClock.stop()
+        }
+    }
+
+    override fun onRestart() {
+        super.onRestart()
+    }
+
     private fun initializeViewModel() {
         viewmodel = ViewModelProvider(this).get(MainActivityViewModel::class.java)
     }
