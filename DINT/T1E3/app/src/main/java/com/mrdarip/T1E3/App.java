@@ -24,7 +24,7 @@ public class App extends Application {
     @Override
     public void start(Stage primaryStage) {
 
-        Label conversionLabel = new Label("Converstir:");
+        Label conversionLabel = new Label("Convertir:");
 
         TextField eurosTextField = new TextField();
         
