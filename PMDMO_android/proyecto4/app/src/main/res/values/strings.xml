@@ -2,4 +2,16 @@
     <string name="app_name">proyecto4</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="pregunta_tipo_pizza">¿Qué tipo de pizza le gustaría tomar?</string>
+    <string name="optPizza2">Margarita</string>
+    <string name="optPizza1">4 quesos</string>
+    <string name="optPizza3">Carbonara</string>
+    <string name="optPizza4">Romana</string>
+    <string name="optPizza5">Barbacoa</string>
+    <string name="pregunta_extras">Elige los ectras que quieras añadir</string>
+    <string name="extra1">Queso</string>
+    <string name="extra2">Salsa</string>
+    <string name="extra3">Cebolla</string>
+    <string name="extra4">Jamón</string>
+    <string name="pregunta_bebida">Elige tu bebida</string>
 </resources>
