@@ -1,4 +1,5 @@
 import com.google.gson.Gson;
+import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
@@ -9,6 +10,7 @@ import java.io.BufferedReader;
 import java.io.FileReader;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
 import java.util.Scanner;
 public class AnalizadorDatosAbiertos {
     public static void main(String[] args) {
@@ -36,8 +38,7 @@ public class AnalizadorDatosAbiertos {
             while ((linea = br.readLine()) != null) {
                 String[] valores = linea.split(",");
                 registros.add(valores);
-            }
-        } catch (Exception e) {
+            }} catch (Exception e) {
             System.out.println("Error al leer el archivo CSV: " +
                     e.getMessage());
         }
@@ -77,13 +78,79 @@ public class AnalizadorDatosAbiertos {
         System.out.println("Número de columnas: " + datos.get(0).length);
         System.out.println("\nPrimeros 5 registros:");
         for (int i = 0; i < Math.min(5, datos.size()); i++) {
-            System.out.println(String.join(" | ", datos.get(i)));
+            System.out.println(String.join(" | ", datos.get(i)));}
+    }
+
+    public static void mostrarResumenJSON(JsonObject datos) {
+        int[] recuento = checkearElemento(datos);
+
+        int numClaves = recuento[0];
+        int numArrays = recuento[1];
+
+        // Mostrar el resultado
+        System.out.println("Número de claves: " + numClaves);
+        System.out.println("Número de arrays: " + numArrays);
+    }
+
+    public static int[] checkearElemento(JsonElement elemento) {
+        int[] recuento = {0,0}; // Contador de claves y arrays
+
+        // Comprobar si el elemento es un objeto JSON
+        if (elemento.isJsonObject()) {
+            JsonObject objeto = elemento.getAsJsonObject();
+            recuento[0]++; // Incrementar el contador de claves
+
+            // Recorrer el objeto JSON
+            for (Map.Entry<String, JsonElement> entry : objeto.entrySet()) {
+                int[] added = checkearElemento(entry.getValue());
+                recuento[0] += added[0];
+                recuento[1] += added[1];
+            }
+        }
+
+        // Comprobar si el elemento es un array JSON
+        if (elemento.isJsonArray()) {
+            recuento[1]++; // Incrementar el contador de arrays
+
+            // Recorrer el array JSON
+            for (JsonElement arrayElement : elemento.getAsJsonArray()) {
+                int[] added = checkearElemento(arrayElement);
+                recuento[0] += added[0];
+                recuento[1] += added[1];
+            }
+        }
+
+        return recuento;
+    }
+
+
+    public static void mostrarResumenXML(Document datos) {
+        // Contar el número total de nodos
+        NodeList todosLosNodos = datos.getElementsByTagName("*"); // Asterisco (*) selecciona todos los nodos
+        System.out.println("Número total de nodos: " + todosLosNodos.getLength());
+
+        // Mostrar el árbol de nodos
+        System.out.println("Estructura del árbol de nodos:");
+        Element raiz = datos.getDocumentElement(); // Obtener el nodo raíz
+        mostrarNodosRecursivamente(raiz, 0); // Llamar a la función recursiva para imprimir el árbol
+    }
+
+
+    public static void mostrarNodosRecursivamente(Element nodo, int nivel) {
+        // Imprimir el nodo con indentación según su nivel en el árbol
+        for (int i = 0; i < nivel; i++) {
+            System.out.print("  "); // Añadir espacios para la indentación
+        }
+        System.out.println("- " + nodo.getNodeName()); // Imprimir el nombre del nodo
+
+        // Obtener los hijos del nodo
+        NodeList hijos = nodo.getChildNodes();
+        for (int i = 0; i < hijos.getLength(); i++) {
+            if (hijos.item(i) instanceof Element) {
+                // Si el hijo es un elemento, llamamos a la función recursiva
+                mostrarNodosRecursivamente((Element) hijos.item(i), nivel + 1);
+            }
         }
     }
-    public static void mostrarResumenJSON(JsonObject datos) {
-// Implementar lógica para mostrar resumen de datos JSON
-    }
-    public static void mostrarResumenXML(Document datos) {
-// Implementar lógica para mostrar resumen de datos XML
-    }
+
 }
