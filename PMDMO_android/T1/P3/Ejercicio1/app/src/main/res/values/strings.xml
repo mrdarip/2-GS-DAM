@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Ejercicio1</string>
+    <string name="red">red</string>
+    <string name="blue">blue</string>
+    <string name="green">green</string>
+    <string name="yellow">yellow</string>
+    <string name="orange">orange</string>
+    <string name="black">black</string>
+</resources>
