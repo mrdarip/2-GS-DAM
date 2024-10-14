@@ -1,0 +1,10 @@
+20/06/2005,comida,tarta,1.0
+21/06/2005,transporte,autobús,2.5
+22/06/2005,entretenimiento,cinema,8.0
+23/06/2005,comida,almuerzo,12.0
+24/06/2005,ropa,camiseta,15.0
+25/06/2005,comida,cena,20.0
+26/06/2005,transporte,taxi,10.0
+27/06/2005,entretenimiento,concierto,50.0
+28/06/2005,comida,desayuno,5.0
+29/06/2005,ropa,pantalones,30.0
