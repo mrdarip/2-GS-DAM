@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Ejercicio2</string>
+    <string name="lifes">Vidas: %1$d</string>
+    <string name="guess">Guess</string>
+</resources>
