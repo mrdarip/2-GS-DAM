@@ -6,7 +6,11 @@ class MainActivityViewModel : ViewModel() {
     private val startingLifes: Int = 4
     private var lifes = startingLifes
 
-    var guessingNumber = newRandomNumber()
+    private var guessingNumber = newRandomNumber()
+
+    public fun getGuessingNumber(): Int {
+        return guessingNumber
+    }
 
     private fun resetGuessingNumber() {
         guessingNumber = newRandomNumber()
@@ -18,6 +22,7 @@ class MainActivityViewModel : ViewModel() {
         resetGuessingNumber()
         resetLifes()
     }
+
     fun getLifes(): Int {
         return lifes
     }
@@ -59,7 +64,7 @@ class MainActivityViewModel : ViewModel() {
             resetGame()
 
             return GuessType.GAME_OVER
-        }else{
+        } else {
             return guessResult
         }
     }

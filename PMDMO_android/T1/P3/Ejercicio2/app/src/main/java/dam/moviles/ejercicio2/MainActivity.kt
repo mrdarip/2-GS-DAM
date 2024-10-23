@@ -22,12 +22,13 @@ class MainActivity : AppCompatActivity() {
 
         updateLifes()
         binding.guessBtn.setOnClickListener {
-            val guess= binding.numGuessET.text.toString().toIntOrNull()
-            val message =when (viewModel.guess(guess)) {
+            val guess = binding.numGuessET.text.toString().toIntOrNull()
+
+            val message = when (viewModel.guess(guess)) {
                 GuessType.EQUAL -> "Has ganado"
-                GuessType.GREATER -> "El número es mayor"
-                GuessType.LESSER -> "El número es menor"
-                GuessType.GAME_OVER -> "Has perdido, el numero era ${viewModel.guessingNumber}"
+                GuessType.GREATER -> "Tu número es mayor"
+                GuessType.LESSER -> "Tu número es menor"
+                GuessType.GAME_OVER -> "Has perdido, el numero era ${viewModel.getGuessingNumber()}"
                 GuessType.NAN -> "Introduce un numero correcto"
             }
 
