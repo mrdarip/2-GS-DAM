@@ -1,11 +1,7 @@
 package dam.moviles.ejercicio1
 
-import android.graphics.Color
 import android.os.Bundle
-import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
 import androidx.lifecycle.ViewModelProvider
 import dam.moviles.ejercicio1.databinding.ActivityMainBinding
 
@@ -33,7 +29,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun setColor() {
-        binding.main.setBackgroundColor(viewModel.getBackgroundColor())
+        binding.main.setBackgroundColor(getColor(viewModel.getBackgroundColorResource()))
         binding.text.text = getString(viewModel.getColorName())
     }
 }

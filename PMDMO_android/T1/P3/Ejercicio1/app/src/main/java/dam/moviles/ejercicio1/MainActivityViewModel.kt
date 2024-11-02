@@ -1,20 +1,18 @@
 package dam.moviles.ejercicio1
 
-import android.graphics.Color
 import androidx.lifecycle.ViewModel
 
 class MainActivityViewModel : ViewModel() {
     private val colors = mapOf(
-        R.string.red to Color.RED,
-        R.string.blue to Color.BLUE,
-        R.string.green to Color.GREEN,
-        R.string.yellow to Color.YELLOW,
-        R.string.orange to Color.rgb(255, 165, 0),
-        R.string.black to Color.BLACK
+        R.string.red to R.color.red,
+        R.string.blue to R.color.blue,
+        R.string.green to R.color.green,
+        R.string.yellow to R.color.yellow,
+        R.string.orange to R.color.orange,
+        R.string.black to R.color.black
     )
 
     private val randomColor = colors.entries.random()
-
-    fun getBackgroundColor() = randomColor.value
+    fun getBackgroundColorResource() = randomColor.value
     fun getColorName() = randomColor.key
 }
