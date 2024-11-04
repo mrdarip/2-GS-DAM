@@ -19,7 +19,7 @@ class MainActivity : AppCompatActivity() {
 
         initializeButton()
 
-        binding.editTextTextMultiLine.text = Editable.Factory.getInstance().newEditable(viewModel.readFile(filesDir))
+        binding.editTextTextMultiLine.setText(viewModel.readFile(filesDir))
     }
 
     private fun initializeButton() {
