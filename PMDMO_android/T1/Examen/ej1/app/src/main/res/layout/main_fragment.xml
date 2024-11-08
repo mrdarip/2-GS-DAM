@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <RadioGroup
+        android:id="@+id/radioGroup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="@+id/guidelineV"
+        app:layout_constraintTop_toTopOf="@+id/guidelineH">
+
+        <RadioButton
+            android:id="@+id/player1Radio"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Jugador 1" />
+
+        <RadioButton
+            android:id="@+id/player2Radio"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Jugador 2" />
+
+        <RadioButton
+            android:id="@+id/player3Radio"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Jugador 3" />
+
+        <RadioButton
+            android:id="@+id/player4Radio"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Jugador 4" />
+    </RadioGroup>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="22dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineH"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="20dp" />
+
+    <EditText
+        android:id="@+id/PuntosP1ET"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:ems="10"
+        android:inputType="text"
+        android:text="Name"
+        app:layout_constraintBottom_toTopOf="@+id/PuntosP2ET"
+        app:layout_constraintEnd_toStartOf="@+id/victoriasP1TV"
+        app:layout_constraintStart_toEndOf="@+id/radioGroup"
+        app:layout_constraintTop_toTopOf="@+id/radioGroup" />
+
+    <EditText
+        android:id="@+id/PuntosP2ET"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:ems="10"
+        android:inputType="text"
+        android:text="Name"
+        app:layout_constraintBottom_toTopOf="@+id/PuntosP3ET"
+        app:layout_constraintEnd_toStartOf="@+id/victoriasP2TV"
+        app:layout_constraintStart_toStartOf="@+id/PuntosP1ET"
+        app:layout_constraintTop_toBottomOf="@+id/PuntosP1ET" />
+
+    <EditText
+        android:id="@+id/PuntosP3ET"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:ems="10"
+        android:inputType="text"
+        android:text="Name"
+        app:layout_constraintBottom_toTopOf="@+id/PuntosP4ET"
+        app:layout_constraintEnd_toStartOf="@+id/victoriasP3TV"
+        app:layout_constraintStart_toStartOf="@+id/PuntosP2ET"
+        app:layout_constraintTop_toBottomOf="@+id/PuntosP2ET" />
+
+    <EditText
+        android:id="@+id/PuntosP4ET"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:ems="10"
+        android:inputType="text"
+        android:text="Name"
+        app:layout_constraintBottom_toBottomOf="@id/radioGroup"
+        app:layout_constraintEnd_toStartOf="@+id/victoriasP4TV"
+        app:layout_constraintStart_toStartOf="@+id/PuntosP3ET"
+        app:layout_constraintTop_toBottomOf="@+id/PuntosP3ET" />
+
+    <TextView
+        android:id="@+id/victoriasP1TV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:text="Victorias : 0"
+        app:layout_constraintBottom_toBottomOf="@+id/PuntosP1ET"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <TextView
+        android:id="@+id/victoriasP2TV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TextView"
+        app:layout_constraintBottom_toBottomOf="@+id/PuntosP2ET"
+        app:layout_constraintEnd_toEndOf="@+id/victoriasP1TV" />
+
+    <TextView
+        android:id="@+id/victoriasP3TV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TextView"
+        app:layout_constraintBottom_toBottomOf="@+id/PuntosP3ET"
+        app:layout_constraintEnd_toEndOf="@+id/victoriasP2TV" />
+
+    <TextView
+        android:id="@+id/victoriasP4TV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TextView"
+        app:layout_constraintBottom_toBottomOf="@+id/PuntosP4ET"
+        app:layout_constraintEnd_toEndOf="@+id/victoriasP3TV" />
+
+    <androidx.constraintlayout.widget.Barrier
+        android:id="@+id/barrera2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:barrierDirection="bottom"
+        app:constraint_referenced_ids="player4Radio, PuntosP4ET, victoriasP4TV" />
+
+    <Button
+        android:id="@+id/tirarDadosButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Tirar dados"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/radioGroup" />
+
+    <ImageView
+        android:id="@+id/dadoImageL"
+        android:layout_width="0dp"
+        android:layout_height="128dp"
+        android:layout_marginTop="24dp"
+        app:layout_constraintEnd_toStartOf="@+id/dadoImageR"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tirarDadosButton"
+        app:srcCompat="@drawable/logo_dados" />
+
+    <ImageView
+        android:id="@+id/dadoImageR"
+        android:layout_width="0dp"
+        android:layout_height="128dp"
+        app:layout_constraintBottom_toBottomOf="@+id/dadoImageL"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/dadoImageL"
+        app:layout_constraintTop_toTopOf="@+id/dadoImageL"
+        app:srcCompat="@drawable/logo_dados" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
