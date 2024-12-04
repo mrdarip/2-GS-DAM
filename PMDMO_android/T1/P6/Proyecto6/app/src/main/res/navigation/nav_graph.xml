@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/bienvenidaFragment">
+
+    <fragment
+        android:id="@+id/bienvenidaFragment"
+        android:name="com.exampi.proyecto6.vista.BienvenidaFragment"
+        android:label="fragment_bienvenida"
+        tools:layout="@layout/fragment_bienvenida" >
+        <action
+            android:id="@+id/action_bienvenidaFragment_to_mensajeFragment"
+            app:destination="@id/mensajeFragment"
+            app:enterAnim="@anim/aparecer_derecha" />
+    </fragment>
+    <fragment
+        android:id="@+id/mensajeFragment"
+        android:name="com.exampi.proyecto6.vista.MensajeFragment"
+        android:label="fragment_mensaje"
+        tools:layout="@layout/fragment_mensaje" >
+        <action
+            android:id="@+id/action_mensajeFragment_to_resultadoFragment"
+            app:destination="@id/resultadoFragment"
+            app:enterAnim="@anim/aparecer_derecha"
+            app:popUpTo="@id/bienvenidaFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/resultadoFragment"
+        android:name="com.exampi.proyecto6.vista.ResultadoFragment"
+        android:label="fragment_resultado"
+        tools:layout="@layout/fragment_resultado" >
+        <argument
+            android:name="mensaje"
+            app:argType="string" />
+        <argument
+            android:name="listacifrados"
+            app:argType="integer[]" />
+    </fragment>
+</navigation>
