@@ -1,0 +1,289 @@
+{ "alumnos" : [
+  {
+    "nombre": "Ana",
+    "apellidos": "González Pérez",
+    "lista_de_asignaturas_matriculadas": ["Matemáticas", "Física", "Química"]
+  },
+  {
+    "nombre": "Carlos",
+    "apellidos": "Martínez López",
+    "lista_de_asignaturas_matriculadas": ["Historia", "Geografía", "Arte"]
+  },
+  {
+    "nombre": "Luis",
+    "apellidos": "Rodríguez Sánchez",
+    "lista_de_asignaturas_matriculadas": ["Lengua", "Inglés", "Ciencias Sociales"]
+  },
+  {
+    "nombre": "María",
+    "apellidos": "Fernández García",
+    "lista_de_asignaturas_matriculadas": ["Filosofía", "Literatura", "Matemáticas"]
+  },
+  {
+    "nombre": "José",
+    "apellidos": "López Martín",
+    "lista_de_asignaturas_matriculadas": ["Física", "Química", "Inglés"]
+  },
+  {
+    "nombre": "Laura",
+    "apellidos": "García Fernández",
+    "lista_de_asignaturas_matriculadas": ["Biología", "Historia", "Matemáticas"]
+  },
+  {
+    "nombre": "Pedro",
+    "apellidos": "Pérez Rodríguez",
+    "lista_de_asignaturas_matriculadas": ["Ciencias Sociales", "Lengua", "Geografía"]
+  },
+  {
+    "nombre": "Raquel",
+    "apellidos": "Sánchez González",
+    "lista_de_asignaturas_matriculadas": ["Arte", "Química", "Inglés"]
+  },
+  {
+    "nombre": "José",
+    "apellidos": "Hernández García",
+    "lista_de_asignaturas_matriculadas": ["Literatura", "Filosofía", "Ciencias Sociales"]
+  },
+  {
+    "nombre": "Elena",
+    "apellidos": "Martínez Fernández",
+    "lista_de_asignaturas_matriculadas": ["Matemáticas", "Historia", "Arte"]
+  },
+  {
+    "nombre": "David",
+    "apellidos": "Rodríguez Pérez",
+    "lista_de_asignaturas_matriculadas": ["Inglés", "Biología", "Física"]
+  },
+  {
+    "nombre": "Sofía",
+    "apellidos": "González López",
+    "lista_de_asignaturas_matriculadas": ["Lengua", "Historia", "Arte"]
+  },
+  {
+    "nombre": "Miguel",
+    "apellidos": "Hernández López",
+    "lista_de_asignaturas_matriculadas": ["Física", "Matemáticas", "Inglés"]
+  },
+  {
+    "nombre": "Paula",
+    "apellidos": "Fernández Martínez",
+    "lista_de_asignaturas_matriculadas": ["Química", "Ciencias Sociales", "Literatura"]
+  },
+  {
+    "nombre": "Manuel",
+    "apellidos": "García Rodríguez",
+    "lista_de_asignaturas_matriculadas": ["Filosofía", "Matemáticas", "Inglés"]
+  },
+  {
+    "nombre": "Victoria",
+    "apellidos": "Pérez Fernández",
+    "lista_de_asignaturas_matriculadas": ["Historia", "Geografía", "Lengua"]
+  },
+  {
+    "nombre": "Antonio",
+    "apellidos": "Martínez Rodríguez",
+    "lista_de_asignaturas_matriculadas": ["Física", "Matemáticas", "Química"]
+  },
+  {
+    "nombre": "Cristina",
+    "apellidos": "Sánchez Martín",
+    "lista_de_asignaturas_matriculadas": ["Lengua", "Literatura", "Arte"]
+  },
+  {
+    "nombre": "Fernando",
+    "apellidos": "López Pérez",
+    "lista_de_asignaturas_matriculadas": ["Biología", "Física", "Matemáticas"]
+  },
+  {
+    "nombre": "Isabel",
+    "apellidos": "Rodríguez Fernández",
+    "lista_de_asignaturas_matriculadas": ["Geografía", "Historia", "Inglés"]
+  },
+  {
+    "nombre": "Javier",
+    "apellidos": "Hernández Pérez",
+    "lista_de_asignaturas_matriculadas": ["Arte", "Filosofía", "Literatura"]
+  },
+  {
+    "nombre": "Susana",
+    "apellidos": "Martínez Rodríguez",
+    "lista_de_asignaturas_matriculadas": ["Biología", "Inglés", "Ciencias Sociales"]
+  },
+  {
+    "nombre": "Ramón",
+    "apellidos": "González López",
+    "lista_de_asignaturas_matriculadas": ["Matemáticas", "Química", "Física"]
+  },
+  {
+    "nombre": "Lucía",
+    "apellidos": "Fernández Rodríguez",
+    "lista_de_asignaturas_matriculadas": ["Lengua", "Literatura", "Filosofía"]
+  },
+  {
+    "nombre": "Óscar",
+    "apellidos": "Sánchez Pérez",
+    "lista_de_asignaturas_matriculadas": ["Historia", "Geografía", "Ciencias Sociales"]
+  },
+  {
+    "nombre": "Carmen",
+    "apellidos": "Martínez García",
+    "lista_de_asignaturas_matriculadas": ["Biología", "Química", "Física"]
+  },
+  {
+    "nombre": "Alberto",
+    "apellidos": "Rodríguez Hernández",
+    "lista_de_asignaturas_matriculadas": ["Literatura", "Ciencias Sociales", "Geografía"]
+  },
+  {
+    "nombre": "Ana",
+    "apellidos": "Sánchez López",
+    "lista_de_asignaturas_matriculadas": ["Filosofía", "Arte", "Inglés"]
+  },
+  {
+    "nombre": "Raúl",
+    "apellidos": "Hernández López",
+    "lista_de_asignaturas_matriculadas": ["Matemáticas", "Historia", "Biología"]
+  },
+  {
+    "nombre": "Laura",
+    "apellidos": "González Rodríguez",
+    "lista_de_asignaturas_matriculadas": ["Ciencias Sociales", "Inglés", "Química"]
+  },
+  {
+    "nombre": "Jorge",
+    "apellidos": "Pérez García",
+    "lista_de_asignaturas_matriculadas": ["Geografía", "Filosofía", "Arte"]
+  },
+  {
+    "nombre": "Marta",
+    "apellidos": "Rodríguez Martínez",
+    "lista_de_asignaturas_matriculadas": ["Literatura", "Ciencias Sociales", "Química"]
+  },
+  {
+    "nombre": "David",
+    "apellidos": "García Sánchez",
+    "lista_de_asignaturas_matriculadas": ["Filosofía", "Inglés", "Historia"]
+  },
+  {
+    "nombre": "Silvia",
+    "apellidos": "Fernández Pérez",
+    "lista_de_asignaturas_matriculadas": ["Matemáticas", "Química", "Ciencias Sociales"]
+  },
+  {
+    "nombre": "Esteban",
+    "apellidos": "Martínez González",
+    "lista_de_asignaturas_matriculadas": ["Física", "Lengua", "Historia"]
+  },
+  {
+    "nombre": "Mónica",
+    "apellidos": "Sánchez Pérez",
+    "lista_de_asignaturas_matriculadas": ["Geografía", "Biología", "Inglés"]
+  },
+  {
+    "nombre": "Tomás",
+    "apellidos": "González Martínez",
+    "lista_de_asignaturas_matriculadas": ["Arte", "Matemáticas", "Filosofía"]
+  },
+  {
+    "nombre": "Alicia",
+    "apellidos": "Hernández Sánchez",
+    "lista_de_asignaturas_matriculadas": ["Historia", "Geografía", "Química"]
+  },
+  {
+    "nombre": "Carlos",
+    "apellidos": "Pérez Fernández",
+    "lista_de_asignaturas_matriculadas": ["Inglés", "Ciencias Sociales", "Literatura"]
+  },
+  {
+    "nombre": "Eva",
+    "apellidos": "Martínez López",
+    "lista_de_asignaturas_matriculadas": ["Matemáticas", "Física", "Química"]
+  },
+  {
+    "nombre": "Fernando",
+    "apellidos": "Rodríguez Sánchez",
+    "lista_de_asignaturas_matriculadas": ["Ciencias Sociales", "Historia", "Geografía"]
+  },
+  {
+    "nombre": "Patricia",
+    "apellidos": "Sánchez Martín",
+    "lista_de_asignaturas_matriculadas": ["Arte", "Literatura", "Filosofía"]
+  },
+  {
+    "nombre": "José",
+    "apellidos": "Martínez Fernández",
+    "lista_de_asignaturas_matriculadas": ["Biología", "Ciencias Sociales", "Inglés"]
+  },
+  {
+    "nombre": "Julia",
+    "apellidos": "García Sánchez",
+    "lista_de_asignaturas_matriculadas": ["Historia", "Literatura", "Física"]
+  },
+  {
+    "nombre": "Felipe",
+    "apellidos": "Rodríguez Pérez",
+    "lista_de_asignaturas_matriculadas": ["Química", "Filosofía", "Matemáticas"]
+  },
+  {
+    "nombre": "Rosa",
+    "apellidos": "Fernández López",
+    "lista_de_asignaturas_matriculadas": ["Lengua", "Historia", "Inglés"]
+  },
+  {
+    "nombre": "Antonio",
+    "apellidos": "Sánchez González",
+    "lista_de_asignaturas_matriculadas": ["Literatura", "Arte", "Geografía"]
+  },
+  {
+    "nombre": "Alejandro",
+    "apellidos": "González Fernández",
+    "lista_de_asignaturas_matriculadas": ["Física", "Ciencias Sociales", "Matemáticas"]
+  },
+  {
+    "nombre": "Clara",
+    "apellidos": "Martínez Pérez",
+    "lista_de_asignaturas_matriculadas": ["Filosofía", "Química", "Geografía"]
+  },
+  {
+    "nombre": "Esther",
+    "apellidos": "Rodríguez Martín",
+    "lista_de_asignaturas_matriculadas": ["Biología", "Literatura", "Historia"]
+  },
+  {
+    "nombre": "Lucía",
+    "apellidos": "González Hernández",
+    "lista_de_asignaturas_matriculadas": ["Filosofía", "Ciencias Sociales", "Inglés"]
+  },
+  {
+    "nombre": "Ángel",
+    "apellidos": "Hernández González",
+    "lista_de_asignaturas_matriculadas": ["Matemáticas", "Arte", "Química"]
+  },
+  {
+    "nombre": "Mónica",
+    "apellidos": "Sánchez Rodríguez",
+    "lista_de_asignaturas_matriculadas": ["Física", "Lengua", "Inglés"]
+  },
+  {
+    "nombre": "Víctor",
+    "apellidos": "Pérez Fernández",
+    "lista_de_asignaturas_matriculadas": ["Geografía", "Biología", "Literatura"]
+  },
+  {
+    "nombre": "Isabel",
+    "apellidos": "Martínez González",
+    "lista_de_asignaturas_matriculadas": ["Historia", "Ciencias Sociales", "Filosofía"]
+  },
+  {
+    "nombre": "Juliana",
+    "apellidos": "Rodríguez Hernández",
+    "lista_de_asignaturas_matriculadas": ["Arte", "Inglés", "Química"]
+  },
+  {
+    "nombre": "Javier",
+    "apellidos": "García Martín",
+    "lista_de_asignaturas_matriculadas": ["Matemáticas", "Física", "Historia"]
+  }
+]
+
+}
