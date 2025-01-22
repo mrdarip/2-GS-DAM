@@ -27,6 +27,7 @@ class ResultadoFragment : Fragment() {
     }
 
     private fun initializeRecyclerView() {
+
         binding.lstResultados.adapter =
             CifradoAdapter(
                 viewModel.listaCifrados,

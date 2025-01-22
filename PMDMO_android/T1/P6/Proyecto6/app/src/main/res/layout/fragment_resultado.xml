@@ -3,6 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".vista.ResultadoFragment"
     android:orientation="vertical"
     android:padding="16dp">
@@ -18,10 +19,11 @@
         />
     <androidx.recyclerview.widget.RecyclerView
         android:layout_width="match_parent"
-        android:layout_height="32dp"
+        android:layout_height="match_parent"
         android:id="@+id/lstResultados"
         android:layout_marginTop="32dp"
-        android:layout_weight="0"/>
+        android:layout_weight="0"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"/>
 
 
 
