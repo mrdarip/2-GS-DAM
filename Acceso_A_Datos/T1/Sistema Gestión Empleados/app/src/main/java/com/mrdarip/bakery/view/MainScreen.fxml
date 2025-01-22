@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<BorderPane xmlns:fx="http://javafx.com/fxml/1" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="366.0"
+            prefWidth="732.0" xmlns="http://javafx.com/javafx/23"
+            fx:controller="com.mrdarip.bakery.model.MainScreenController">
+   <top>
+       <HBox id="top" alignment="CENTER_LEFT" prefHeight="0.0" prefWidth="0.0" spacing="16.0" styleClass="bg"
+             BorderPane.alignment="CENTER">
+         <children>
+            <HBox>
+               <children>
+                  <ComboBox fx:id="orderCombo" promptText="Order by" />
+                   <ToggleButton fx:id="orderToggle" mnemonicParsing="false" onAction="#onOrderToggleChange"
+                                 styleClass="rToggle" text="↑"/>
+               </children>
+            </HBox>
+            <TextField fx:id="queryPlateTF" promptText="Search" HBox.hgrow="ALWAYS" />
+         </children>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+         <padding>
+            <Insets bottom="16.0" left="16.0" right="16.0" top="16.0" />
+         </padding></HBox>
+   </top>
+   <center>
+       <StackPane fx:id="bgStackPane" minHeight="0.0" minWidth="0.0" prefHeight="0.0" prefWidth="0.0"
+                  styleClass="fireBg" BorderPane.alignment="CENTER">
+         <children>
+             <ScrollPane fx:id="flowPaneScroll" cache="true" fitToWidth="true" hbarPolicy="NEVER" minHeight="0.0"
+                         minWidth="0.0" prefHeight="0.0" prefWidth="0.0"
+                         style="-fx-background: transparent; -fx-background-color: transparent;" styleClass="bg">
+                 <content>
+                     <FlowPane fx:id="platesFlowPane" alignment="TOP_CENTER" columnHalignment="CENTER" hgap="16.0"
+                               maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="0.0"
+                               minWidth="0.0" rowValignment="BOTTOM" style="-fx-background-color: transparent;"
+                               vgap="16.0">
+                     <padding>
+                        <Insets bottom="10.0" left="16.0" right="16.0" top="10.0" />
+                     </padding>
+                     </FlowPane>
+                 </content>
+             </ScrollPane>
+            <Button mnemonicParsing="false" onAction="#navigateToTop" text="↑" StackPane.alignment="BOTTOM_RIGHT">
+               <StackPane.margin>
+                  <Insets bottom="15.0" left="15.0" right="30.0" top="30.0" />
+               </StackPane.margin>
+            </Button>
+         </children>
+      </StackPane>
+   </center>
+</BorderPane>
